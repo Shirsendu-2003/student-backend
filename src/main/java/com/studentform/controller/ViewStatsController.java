@@ -8,7 +8,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/admin/students/views")
-@CrossOrigin(origins = "http://localhost:3001")
+@CrossOrigin(origins = "http://admin-view-three.vercel.app")
 public class ViewStatsController {
 
     private final ViewStatsService viewService;
