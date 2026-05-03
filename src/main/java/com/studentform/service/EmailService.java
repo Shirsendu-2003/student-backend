@@ -12,12 +12,33 @@ public class EmailService {
     private JavaMailSender mailSender;
 
     public void sendVerificationEmail(String toEmail, String name) {
+
         SimpleMailMessage message = new SimpleMailMessage();
         message.setTo(toEmail);
         message.setSubject("Email Verification");
-        message.setText("Hello " + name + ",\n\nThank you for registering. Please check your email to verify your account.\n\nRegards,\nStudent Form Team");
-       message.setFrom("drsoitani10@gmail.com"); // ✅ MUST match SMTP username // Replace with your sender email
+        message.setText(
+                "Hello " + name + ",\n\n" +
+                "Thank you for registering.\n\n" +
+                "Regards,\nStudent Form Team"
+        );
+        message.setFrom("drsoitani10@gmail.com");
 
-        mailSender.send(message);
+        try {
+            mailSender.send(message);
+            System.out.println("✅ Email sent successfully");
+
+        } catch (Exception e) {
+            System.out.println("❌ First attempt failed, retrying...");
+
+            try {
+                Thread.sleep(2000); // wait 2 sec
+                mailSender.send(message);
+                System.out.println("✅ Email sent on retry");
+
+            } catch (Exception ex) {
+                System.out.println("❌ Email failed completely");
+                ex.printStackTrace();
+            }
+        }
     }
 }
