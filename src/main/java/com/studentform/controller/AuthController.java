@@ -18,7 +18,7 @@ import java.util.Map;
 
 @RestController
 @RequestMapping("/api/auth")
-@CrossOrigin(origins = "http://admin-view-three.vercel.app") // React Admin Frontend
+@CrossOrigin(origins = "https://admin-view-three.vercel.app") // React Admin Frontend
 public class AuthController {
 
     @Autowired
