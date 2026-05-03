@@ -17,7 +17,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/admin")
-@CrossOrigin(origins = "http://admin-view-three.vercel.app") // Adjust as per your frontend
+@CrossOrigin(origins = "https://admin-view-three.vercel.app") // Adjust as per your frontend
 public class AdminController {
 
     @Autowired
