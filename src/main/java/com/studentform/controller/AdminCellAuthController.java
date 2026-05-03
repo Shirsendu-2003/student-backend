@@ -13,7 +13,7 @@ import java.util.Map;
 @RestController
 @RequestMapping("/api/auth/admincell")
 @RequiredArgsConstructor
-@CrossOrigin(origins = "http://admin-view-three.vercel.app")
+@CrossOrigin(origins = "https://admin-view-three.vercel.app")
 public class AdminCellAuthController {
 
     private final AdminCellService adminCellService;
