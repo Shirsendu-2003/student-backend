@@ -19,7 +19,7 @@ import java.util.Optional;
  */
 @RestController
 @RequestMapping("/api/admincell")
-@CrossOrigin(origins = "http://admin-view-three.vercel.app")
+@CrossOrigin(origins = "https://admin-view-three.vercel.app")
 public class AdminCellController {
 
     @Autowired
