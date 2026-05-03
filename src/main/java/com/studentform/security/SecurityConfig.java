@@ -96,7 +96,7 @@ public class SecurityConfig {
 
         config.setAllowedOrigins(List.of(
                 "https://student-frontend-lyart.vercel.app",
-                "http://localhost:3001"
+                "http://admin-view-three.vercel.app"
         ));
 
         config.setAllowedMethods(List.of("*"));
